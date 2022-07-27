@@ -6,4 +6,5 @@
 
 #### Branches
 - `master`: utils with local-cache and idb
+- `8iframe-master`: 8iframe app. Each iframe is master branch.
 - `v6`: same current propose at v6
