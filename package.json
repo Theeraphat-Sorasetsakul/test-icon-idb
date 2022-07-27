@@ -11,8 +11,7 @@
   "license": "ISC",
   "dependencies": {
     "@refinitiv-ui/elements": "^6.0.3",
-    "@refinitiv-ui/halo-theme": "^6.1.2",
-    "@refinitiv-ui/utils": "file:~/any/packages/utils"
+    "@refinitiv-ui/halo-theme": "^6.1.2"
   },
   "devDependencies": {
     "webpack": "^5.74.0",
