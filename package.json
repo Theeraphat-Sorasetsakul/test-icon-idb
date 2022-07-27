@@ -1,0 +1,22 @@
+{
+  "name": "test-icon-idb",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "webpack-cli serve --compress --host 0.0.0.0 --mode production",
+    "build": "webpack --config webpack.config.js --mode production"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@refinitiv-ui/elements": "^6.0.3",
+    "@refinitiv-ui/halo-theme": "^6.1.2",
+    "@refinitiv-ui/utils": "file:~/any/packages/utils"
+  },
+  "devDependencies": {
+    "webpack": "^5.74.0",
+    "webpack-cli": "^4.10.0",
+    "webpack-dev-server": "^4.9.3"
+  }
+}
