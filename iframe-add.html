@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>8iframe-IDB</title>
+    <style>
+      body {
+        margin: auto;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="content">
+      <iframe width="300" height="200" src="icons-1-146.html" name="iframe-1"></iframe>
+      <iframe width="300" height="200" src="icons-1-146.html" name="iframe-2"></iframe>
+      <!-- <iframe width="300" height="200" src="icons-147-294.html" name="iframe-3"></iframe>
+      <iframe width="300" height="200" src="icons-147-294.html" name="iframe-4"></iframe>
+      <iframe width="300" height="200" src="icons-295-438.html" name="iframe-5"></iframe>
+      <iframe width="300" height="200" src="icons-295-438.html" name="iframe-6"></iframe>
+      <iframe width="300" height="200" src="icons-439-583.html" name="iframe-7"></iframe>
+      <iframe width="300" height="200" src="icons-439-583.html" name="iframe-8"></iframe> -->
+    </div>
+    <select id="iconSet" >
+      <option value="icons-1-146.html">icons 1 - 146 </option>
+      <option value="icons-147-294.html">icons 147 - 294 </option>
+      <option value="icons-295-438.html">icons 295 - 438 </option>
+      <option value="icons-439-583.html">icons 439 - 583</option>
+    </select>
+    <button id="addBtn">Add Double Iframe</button>
+    <script>
+
+      let totalIframe = 2;
+      const btnAdd = document.getElementById('addBtn');
+
+      btnAdd.addEventListener('click', () => {
+        const iconSet = document.getElementById('iconSet');
+        const iframe1 = document.createElement('iframe');
+        iframe1.setAttribute('width', '300');
+        iframe1.setAttribute('height', '200');
+        iframe1.setAttribute('name', `iframe-${++totalIframe}`);
+        iframe1.setAttribute('src', iconSet.options[iconSet.selectedIndex].value);
+
+        const iframe2 = document.createElement('iframe');
+        iframe2.setAttribute('width', '300');
+        iframe2.setAttribute('height', '200');
+        iframe2.setAttribute('name', `iframe-${++totalIframe}`);
+        iframe2.setAttribute('src', iconSet.options[iconSet.selectedIndex].value);
+
+        const content = document.getElementById('content');
+        content.appendChild(iframe1);
+        content.appendChild(iframe2);
+
+        btnAdd.focus();
+      });
+    </script>
+  </body>
+</html>
