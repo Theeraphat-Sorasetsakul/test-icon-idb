@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>8iframe-IDB</title>
+    <style>
+      body {
+        margin: auto;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="content"></div>
+  </body>
+  <script>
+    const content = document.getElementById('content');
+    let total = 0;
+
+      const inteval = setInterval(() => {
+        total++
+        if (total <= 8) {
+          const iframe = document.createElement('iframe');
+          iframe.setAttribute('width', '300');
+          iframe.setAttribute('height', '500');
+          iframe.setAttribute('src', 'icons-random.html');
+          // iframe.setAttribute('src', 'index.html');
+          iframe.setAttribute('name', 'iframe' + (total));
+          content.appendChild(iframe);
+        } else {
+          clearInterval(inteval);
+        }
+      }, 500);
+
+
+  </script>
+</html>
