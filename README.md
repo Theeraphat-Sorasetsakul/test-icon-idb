@@ -1,7 +1,7 @@
 #### Step to deploy
 1. Fix the utils path in package.json
 2. `npm run build`
-3. Use *root/index.html* for app entry, then deploy
+3. Use *root/all-icon.html* for app entry, then deploy
 
 #### Branches
 - `master`: utils with local-cache and idb

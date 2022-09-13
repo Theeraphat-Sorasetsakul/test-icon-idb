@@ -13,26 +13,23 @@
   </head>
   <body>
     <div id="content"></div>
-  </body>
-  <script>
-    const content = document.getElementById('content');
-    let total = 0;
-
+    <script>
+      const content = document.getElementById('content');
+      let total = 0;
       const inteval = setInterval(() => {
-        total++
+        total++;
         if (total <= 8) {
           const iframe = document.createElement('iframe');
           iframe.setAttribute('width', '300');
           iframe.setAttribute('height', '500');
           iframe.setAttribute('src', 'icons-random.html');
-          // iframe.setAttribute('src', 'index.html');
+          // iframe.setAttribute('src', 'all-icon.html');
           iframe.setAttribute('name', 'iframe' + (total));
           content.appendChild(iframe);
         } else {
           clearInterval(inteval);
         }
       }, 500);
-
-
-  </script>
+    </script>
+  </body>
 </html>
